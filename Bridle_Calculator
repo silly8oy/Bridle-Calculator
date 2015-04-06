@@ -1,0 +1,210 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Script codé par Danee PUIG (silly8oy) 
+# Autorisation de :  partager, copier, distibuer et communiquer le materiel par tous moyens et sous tous formats,
+# Possibilité de modifier, adapter, remixer et créer a partir du matériel sous condition de nommer le créateur originel du script
+# Et cela pour toute utilisation y compris commerciale.
+# Sous lincence Creative Commons (CC)
+
+
+import sys, math
+
+
+
+print
+print
+print
+print ('''CALCULATEUR DE BRIDLE POUR ELINGAGE.\nBy silly8oy''')
+print
+print('''	Calcule : - longuer d'elingues
+		  - tension dans les brins
+		  - angle du bridle
+		  - forces horizontales et forces verticales''')
+print
+
+print ('''            __|__________D__________|____
+	      ,.                   .,
+	      , .                 . ,
+	      ,  .               .  ,
+	      ,   .             .   ,
+	      ,    .E1       E2.    ,
+	      h1    .         .     h2
+	      ,      .       .      ,
+	      ,       .     .       , 
+	      ,        .   .        ,
+	      ,         . .         ,
+	      ,.....e.....     .    ,
+	      ,       -------  .    ,
+	      ,       -  P  -  .    ,
+	      ,       -------  .    ,
+	      ,                F    ,
+	      ,                .    ,
+	      ,                .    ,
+	     _,________________.____,_''')
+
+print 
+print 
+
+def erreur():
+  print '''\n\nje n'ai pas compris la réponse... Veuillez relancer le programme'''
+
+
+def calc1():
+                   
+  print ("veuillez rentrer la distance D entre vos elingues")
+  D=float (sys.stdin.readline())
+
+  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E1 a partir du sol")
+  h1=float (sys.stdin.readline())
+  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E2 a partir du sol")
+  h2=float (sys.stdin.readline())
+
+  print ("veuillez rentrer la hauteur du point d'accroche F (hauteur sous crochet)")
+  F=float (sys.stdin.readline())
+
+  print ("veuillez rentrer la distance e (apex)")
+  e=float (sys.stdin.readline())
+
+
+  print ("veuillez rentrer le poids de votre objet suspendu")
+  P=float (sys.stdin.readline())
+  
+  #Calcul hauteurs et Brin E2
+  f=D-e
+  
+  c=h1-F
+  d=h2-F
+
+  L1=float (math.sqrt((math.pow(e,2)+math.pow(c,2))))
+  L2=float (math.sqrt((math.pow(f,2)+math.pow(d,2))))
+
+  #Tension dans les brins
+  Fa=float ((P*L1*f)/((c*f)+(d*e)))
+  Fb=float ((P*L2*e)/((c*f)+(d*e)))
+
+  #Calcul Angle
+  A1=f/d
+  A2=e/c
+
+  Ang=math.atan(A1)+math.atan(A2)
+  Ang2=math.degrees(Ang)
+
+  #Arrondi à 2 après la virgule
+  Fa=round(Fa,2)
+  Fb=round(Fb,2)
+  L1=round(L1,2)
+  L2=round(L2,2)
+  Ang2=round(Ang2,2)
+  
+  #Composantes vert. et horiz.
+  VE1= Fa*(c/L1)
+  HE1= Fa*(e/L1)
+  VE2= Fb*(d/L2)
+  HE2= Fb*(f/L2)
+  VE1=round(VE1,2)
+  HE1=round(HE1,2)
+  VE2=round(VE2,2)
+  HE2=round(HE2,2)
+
+
+  print
+  print
+
+
+
+  print ("la longueur de E1 = %s m. et la longuer de E2 = %s m." %(L1, L2))
+  print  
+  print ('''la tension de E1 est de %s daN et  la tension de E2 est de %s daN'''  % (Fa, Fb))
+  print
+  print ("l'angle de votre bridle est de %s° degrés" %(Ang2))
+  print
+  print('''Pour E1 : F vericale = %s daN et F Horizontale = %s daN'''%(VE1, HE1))
+  print
+  print('''Pour E2 : F vericale = %s daN et F Horizontale = %s daN'''%(VE2, HE2))
+  print
+
+def calc2():
+  print ('''veuillez rentrer la longueur de votre elingue E1''')
+  L1=float (sys.stdin.readline())
+  print ("veuillez rentrer la distance D entre vos elingues")
+  D=float (sys.stdin.readline())
+  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E1 à partir du sol")
+  h1=float (sys.stdin.readline())
+  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E2 à partir du sol")
+  h2=float (sys.stdin.readline())
+  print ("veuillez rentrer la distance e (apex)")
+  e=float (sys.stdin.readline())
+  print ("veuillez rentrer le poids de votre objet")
+  P=float (sys.stdin.readline())
+  
+  #Calcul hauteurs et Brin E2
+  c=(math.sqrt((math.pow(L1,2)-math.pow(e,2))))
+  f=D-e
+  F=h1-c
+  d=h2-F
+  L2=(math.sqrt((math.pow(d,2)+math.pow(f,2))))
+  
+  #Calcul Angle
+  A1=e/c
+  A2=f/d
+  
+  Ang=math.atan(A1)+math.atan(A2)
+  Ang2=math.degrees(Ang)
+  
+  #Tension dans les brins
+  Fa=float ((P*L1*f)/((c*f)+(d*e)))
+  Fb=float ((P*L2*e)/((c*f)+(d*e)))
+  
+  #Arrondi à 2 après la virgule
+  Fa=round(Fa,2)
+  F=round(F,2)
+  Fb=round(Fb,2)
+  L1=round(L1,2)
+  L2=round(L2,2)
+  Ang2=round(Ang2,2)
+  
+  #Composantes vert. et horiz.
+  VE1= Fa*(c/L1)
+  HE1= Fa*(e/L1)
+  VE2= Fb*(d/L2)
+  HE2= Fb*(f/L2)
+  VE1=round(VE1,2)
+  HE1=round(HE1,2)
+  VE2=round(VE2,2)
+  HE2=round(HE2,2)
+  
+  
+  print
+  print
+  print ('''la longueur de l'elingue E2 est de %s m.'''%(L2))
+  print
+  print ('''la tension de E1 est de %s daN et  la tension de E2 est de %s daN'''  % (Fa, Fb))
+  print
+  print ('''l'angle de votre bridle es de %s° degrés'''%(Ang2))
+  print
+  print('''Pour E1 : F vericale = %s DaN et F Horizontale = %s DaN'''%(VE1, HE1))
+  print
+  print('''Pour E2 : F vericale = %s DaN et F Horizontale = %s DaN'''%(VE2, HE2))
+  print 
+  print ('''la hauteur de votre crochet moteur est de %s m.'''%(F))
+  print
+  
+  
+  
+
+print('''Vous pouvez calculer votre bridle selon deux methodes: \n\n 1) en laissant le programme calculer les deux brins\n\n 2) en ayant un brin déjà prédéfinit. (ex :E1 prédefinie et E2 avec Deckchain)\n\n''') 
+
+print
+print
+answ1='0'
+while answ1 =='0':
+  try:
+    answ1= raw_input('''Quelle methode voule-vous utiliser? ''')
+    answ2=int(answ1)
+    if answ1 == '1' or answ1 == 'un' or answ1 == 'la 1' or answ1 == 'la un' :
+      calc1()
+    elif answ1 == '2' or answ1 == 'deux' or answ1 == 'la 2' or answ1 == 'la deux' :
+      calc2()
+  except ValueError:
+    erreur()
