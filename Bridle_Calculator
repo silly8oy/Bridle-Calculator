@@ -5,7 +5,7 @@
 # Autorisation de :  partager, copier, distibuer et communiquer le materiel par tous moyens et sous tous formats,
 # Possibilité de modifier, adapter, remixer et créer a partir du matériel sous condition de nommer le créateur originel du script
 # Et cela pour toute utilisation y compris commerciale.
-# Sous lincence Creative Commons (CC)
+# Sous lincence GNU GENERAL PUBLIC LICENSE
 
 
 import sys, math
