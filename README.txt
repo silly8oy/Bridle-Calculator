@@ -11,4 +11,4 @@ It calculates :
 It's a iBridle like app.
 You can calculate it with 2 differrent ways.
   1) let the app do the calculation by entering just the raw distances
-  2) by defining the lenght of first steel (the short one) and implying that you have a deckchain on the other end of the   bridle.
+  2) by defining the lenght of first steel (the short one) and implying that you have a deckchain on the other end of the bridle.
