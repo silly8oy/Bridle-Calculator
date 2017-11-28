@@ -52,22 +52,22 @@ def erreur():
 
 def calc1():
                    
-  print ("veuillez rentrer la distance D entre vos elingues")
+  print ("veuillez rentrer la distance D entre vos elingues en mètres")
   D=float (sys.stdin.readline())
 
-  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E1 a partir du sol")
+  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E1 a partir du sol en mètres")
   h1=float (sys.stdin.readline())
-  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E2 a partir du sol")
+  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E2 a partir du sol en mètres")
   h2=float (sys.stdin.readline())
 
-  print ("veuillez rentrer la hauteur du point d'accroche F (hauteur sous crochet)")
+  print ("veuillez rentrer la hauteur du point d'accroche F (hauteur sous crochet) en mètres")
   F=float (sys.stdin.readline())
 
-  print ("veuillez rentrer la distance e (apex)")
+  print ("veuillez rentrer la distance e (apex) en mètres")
   e=float (sys.stdin.readline())
 
 
-  print ("veuillez rentrer le poids de votre objet suspendu")
+  print ("veuillez rentrer le poids de votre objet suspendu en Kg")
   P=float (sys.stdin.readline())
   
   #Calcul hauteurs et Brin E2
@@ -125,17 +125,17 @@ def calc1():
   print
 
 def calc2():
-  print ('''veuillez rentrer la longueur de votre elingue E1''')
+  print ('''veuillez rentrer la longueur de votre elingue E1 en mètres''')
   L1=float (sys.stdin.readline())
-  print ("veuillez rentrer la distance D entre vos elingues")
+  print ("veuillez rentrer la distance D entre vos elingues en mètres")
   D=float (sys.stdin.readline())
-  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E1 à partir du sol")
+  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E1 à partir du sol en mètres")
   h1=float (sys.stdin.readline())
-  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E2 à partir du sol")
+  print ("veuillez rentrer la hauteur du point d'accroche de l'elingue E2 à partir du sol en mètres")
   h2=float (sys.stdin.readline())
-  print ("veuillez rentrer la distance e (apex)")
+  print ("veuillez rentrer la distance e (apex) en mètres")
   e=float (sys.stdin.readline())
-  print ("veuillez rentrer le poids de votre objet")
+  print ("veuillez rentrer le poids de votre objet en Kg")
   P=float (sys.stdin.readline())
   
   #Calcul hauteurs et Brin E2
@@ -179,7 +179,7 @@ def calc2():
   print
   print ('''la longueur de l'elingue E2 est de %s m.'''%(L2))
   print
-  print ('''la tension de E1 est de %s daN et  la tension de E2 est de %s daN'''  % (Fa, Fb))
+  print ('''la tension de E1 est de %s daN et  la tension de E2 est de %s DaN'''  % (Fa, Fb))
   print
   print ('''l'angle de votre bridle es de %s° degrés'''%(Ang2))
   print
@@ -200,7 +200,7 @@ print
 answ1='0'
 while answ1 =='0':
   try:
-    answ1= raw_input('''Quelle methode voule-vous utiliser? ''')
+    answ1= raw_input('''Quelle methode voulez-vous utiliser? ''')
     answ2=int(answ1)
     if answ1 == '1' or answ1 == 'un' or answ1 == 'la 1' or answ1 == 'la un' :
       calc1()
