@@ -15,13 +15,11 @@ import sys, math
 print
 print
 print
-print ('''CALCULATEUR DE BRIDLE POUR ELINGAGE.\nBy silly8oy''')
-print
+print ('''CALCULATEUR DE BRIDLE POUR ELINGAGE.\nBy silly8oy \n''')
 print('''	Calcule : - longuer d'elingues
 		  - tension dans les brins
 		  - angle du bridle
-		  - forces horizontales et forces verticales''')
-print
+		  - forces horizontales et forces verticales \n''')
 
 print ('''            __|__________D__________|____
 	      ,.                   .,
@@ -41,10 +39,9 @@ print ('''            __|__________D__________|____
 	      ,                F    ,
 	      ,                .    ,
 	      ,                .    ,
-	     _,________________.____,_''')
+	     _,________________.____,_\n/n''')
 
-print 
-print 
+
 
 def erreur():
   print '''\n\nje n'ai pas compris la réponse... Veuillez relancer le programme'''
@@ -108,21 +105,15 @@ def calc1():
   HE2=round(HE2,2)
 
 
-  print
-  print
 
 
 
-  print ("la longueur de E1 = %s m. et la longuer de E2 = %s m." %(L1, L2))
-  print  
-  print ('''la tension de E1 est de %s daN et  la tension de E2 est de %s daN'''  % (Fa, Fb))
-  print
-  print ("l'angle de votre bridle est de %s° degrés" %(Ang2))
-  print
-  print('''Pour E1 : F vericale = %s daN et F Horizontale = %s daN'''%(VE1, HE1))
-  print
-  print('''Pour E2 : F vericale = %s daN et F Horizontale = %s daN'''%(VE2, HE2))
-  print
+  print ("\n\n")
+  print ("la longueur de E1 = %s m. et la longuer de E2 = %s m. \n" %(L1, L2)) 
+  print ('''la tension de E1 est de %s daN et  la tension de E2 est de %s daN \n'''  % (Fa, Fb))
+  print ("l'angle de votre bridle est de %s° degrés \n" %(Ang2))
+  print('''Pour E1 : F vericale = %s daN et F Horizontale = %s daN \n'''%(VE1, HE1))
+  print('''Pour E2 : F vericale = %s daN et F Horizontale = %s daN \n'''%(VE2, HE2))
 
 def calc2():
   print ('''veuillez rentrer la longueur de votre elingue E1 en mètres''')
@@ -175,28 +166,21 @@ def calc2():
   HE2=round(HE2,2)
   
   
-  print
-  print
-  print ('''la longueur de l'elingue E2 est de %s m.'''%(L2))
-  print
-  print ('''la tension de E1 est de %s daN et  la tension de E2 est de %s DaN'''  % (Fa, Fb))
-  print
-  print ('''l'angle de votre bridle es de %s° degrés'''%(Ang2))
-  print
-  print('''Pour E1 : F vericale = %s DaN et F Horizontale = %s DaN'''%(VE1, HE1))
-  print
-  print('''Pour E2 : F vericale = %s DaN et F Horizontale = %s DaN'''%(VE2, HE2))
-  print 
-  print ('''la hauteur de votre crochet moteur est de %s m.'''%(F))
-  print
+ 
+  print ("\n\n")
+  print ('''la longueur de l'elingue E2 est de %s m. \n'''%(L2))
+  print ('''la tension de E1 est de %s daN et  la tension de E2 est de %s DaN \n'''  % (Fa, Fb))
+  print ('''l'angle de votre bridle es de %s° degrés \n'''%(Ang2))
+  print('''Pour E1 : F vericale = %s DaN et F Horizontale = %s DaN \n'''%(VE1, HE1))
+  print('''Pour E2 : F vericale = %s DaN et F Horizontale = %s DaN \n'''%(VE2, HE2))
+  print ('''la hauteur de votre crochet moteur est de %s m. \n'''%(F))
   
   
   
 
 print('''Vous pouvez calculer votre bridle selon deux methodes: \n\n 1) en laissant le programme calculer les deux brins\n\n 2) en ayant un brin déjà prédéfinit. (ex :E1 prédefinie et E2 avec Deckchain)\n\n''') 
 
-print
-print
+
 answ1='0'
 while answ1 =='0':
   try:
